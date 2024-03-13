@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import 'bwatch_viewmodel.dart';
+import 'bshoes_viewmodel.dart';
 
-class BwatchView extends StackedView<BwatchViewModel> {
-  const BwatchView({Key? key}) : super(key: key);
+class BshoesView extends StackedView<BshoesViewModel> {
+  const BshoesView({Key? key}) : super(key: key);
 
   @override
   Widget builder(
     BuildContext context,
-    BwatchViewModel viewModel,
+    BshoesViewModel viewModel,
     Widget? child,
   ) {
     return Center(
         child: Icon(
-      Icons.watch,
+      Icons.shopping_bag,
       size: 200,
     ));
   }
 
   @override
-  BwatchViewModel viewModelBuilder(
+  BshoesViewModel viewModelBuilder(
     BuildContext context,
   ) =>
-      BwatchViewModel();
+      BshoesViewModel();
 }
