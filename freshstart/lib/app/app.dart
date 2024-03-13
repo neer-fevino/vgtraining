@@ -8,6 +8,7 @@ import 'package:freshstart/ui/views/newview/newview_view.dart';
 import 'package:freshstart/services/db_service.dart';
 import 'package:freshstart/services/common_service_service.dart';
 import 'package:freshstart/ui/views/bwatch/bwatch_view.dart';
+import 'package:freshstart/ui/views/bshoes/bshoes_view.dart';
 // @stacked-import
 
 @StackedApp(routes: [
@@ -15,6 +16,7 @@ import 'package:freshstart/ui/views/bwatch/bwatch_view.dart';
   MaterialRoute(page: StartupView),
   MaterialRoute(page: NewviewView),
   MaterialRoute(page: BwatchView),
+  MaterialRoute(page: BshoesView),
 // @stacked-route
 ], dependencies: [
   LazySingleton(classType: BottomSheetService),

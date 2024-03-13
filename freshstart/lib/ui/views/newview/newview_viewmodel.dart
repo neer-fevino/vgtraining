@@ -5,8 +5,6 @@ import 'package:freshstart/services/common_service_service.dart';
 import 'package:stacked/stacked.dart';
 
 class NewviewViewModel extends ReactiveViewModel {
-
-
   int get _getBodyIndex => _commonService.bodyIndex;
   final _commonService = locator<CommonServiceService>();
 
@@ -17,7 +15,5 @@ class NewviewViewModel extends ReactiveViewModel {
   void changeBottomNavigationIndex(int index) {
     // _getBodyIndex = _commonService.bodyIndex;
     _commonService.setBodyIndex(index);
-   
   }
-
 }

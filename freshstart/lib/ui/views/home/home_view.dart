@@ -16,8 +16,8 @@ class HomeView extends StackedView<HomeViewModel> {
   ) {
     final TextEditingController _controller = TextEditingController();
 
-    return 
-      Container(
+    return Material(
+      child: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -50,8 +50,8 @@ class HomeView extends StackedView<HomeViewModel> {
             ),
           ],
         ),
-      );
-   
+      ),
+    );
   }
 
   @override

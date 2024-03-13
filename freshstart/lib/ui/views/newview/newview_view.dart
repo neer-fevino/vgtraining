@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshstart/ui/views/bshoes/bshoes_view.dart';
 import 'package:freshstart/ui/views/bwatch/bwatch_view.dart';
 import 'package:freshstart/ui/views/home/home_view.dart';
 import 'package:stacked/stacked.dart';
@@ -16,7 +17,9 @@ class NewviewView extends StackedView<NewviewViewModel> {
   ) {
     List<Widget> bodyContent = [
       HomeView(),
-      BwatchView(),
+      BshoesView(),
+      BwatchView()
+      
     ];
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 245, 243, 237),
@@ -27,7 +30,10 @@ class NewviewView extends StackedView<NewviewViewModel> {
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_basket),
+            label: 'Shoes',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Watch',
