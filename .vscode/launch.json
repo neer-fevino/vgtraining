@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "freshstart",
+            "cwd": "freshstart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "freshstart (profile mode)",
+            "cwd": "freshstart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "freshstart (release mode)",
+            "cwd": "freshstart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

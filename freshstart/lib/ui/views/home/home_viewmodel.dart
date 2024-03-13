@@ -45,21 +45,16 @@ class HomeViewModel extends BaseViewModel {
   onSubmitSaveToDb(TextEditingController yeHaiParametr) async {
     _logger.i(yeHaiParametr.text);
     try {
-    TeamFevinosCompanion entry = TeamFevinosCompanion(
-      name: Value(yeHaiParametr.text),
-      
+      TeamFevinosCompanion entry = TeamFevinosCompanion(
+        name: Value(yeHaiParametr.text),
+      );
 
-    );
-      
- var rs = await  _db.db.insertFevinoMember(entry);
- _logger.i(rs);
+      var rs = await _db.db.insertFevinoMember(entry);
+      _logger.i(rs);
     } catch (e) {
-          _logger.i(e);
-
+      _logger.i(e);
     }
-
   }
-
 
   void openNewView() {
     _navigationService.navigateToNewviewView();

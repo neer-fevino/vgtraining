@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freshstart/ui/views/bwatch/bwatch_view.dart';
+import 'package:freshstart/ui/views/home/home_view.dart';
 import 'package:stacked/stacked.dart';
 
 import 'newview_viewmodel.dart';
@@ -12,10 +14,29 @@ class NewviewView extends StackedView<NewviewViewModel> {
     NewviewViewModel viewModel,
     Widget? child,
   ) {
+    List<Widget> bodyContent = [
+      HomeView(),
+      BwatchView(),
+    ];
     return Scaffold(
-      backgroundColor: Colors.amber,
-      body: Container(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+      backgroundColor: const Color.fromARGB(255, 245, 243, 237),
+      body: bodyContent[viewModel.getBodyIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Watch',
+          ),
+        ],
+        currentIndex: viewModel.getBodyIndex,
+        onTap: (value) {
+          viewModel.changeBottomNavigationIndex(value);
+        },
       ),
     );
   }
