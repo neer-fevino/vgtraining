@@ -16,8 +16,8 @@ class HomeView extends StackedView<HomeViewModel> {
   ) {
     final TextEditingController _controller = TextEditingController();
 
-    return Scaffold(
-      body: Container(
+    return 
+      Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -38,10 +38,20 @@ class HomeView extends StackedView<HomeViewModel> {
                 ),
               ),
             ),
+            Container(
+              child: Center(
+                child: TextButton(
+                  onPressed: () {
+                    viewModel.openNewView();
+                  },
+                  child: Text("Go To New View"),
+                ),
+              ),
+            ),
           ],
         ),
-      ),
-    );
+      );
+   
   }
 
   @override
