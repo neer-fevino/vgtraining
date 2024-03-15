@@ -12,11 +12,18 @@ class BshoesView extends StackedView<BshoesViewModel> {
     BshoesViewModel viewModel,
     Widget? child,
   ) {
-    return Center(
-        child: Icon(
-      Icons.shopping_bag,
-      size: 200,
-    ));
+    return FutureBuilder(
+      future: viewModel.fetchNames(),
+      initialData: [],
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        List<dynamic> names = snapshot.data;
+        return ListView.builder(
+          itemCount: viewModel.namesLength,
+          itemBuilder: (BuildContext context, int index) {
+            return Center(child: Text(names[index]));
+          },
+        );      },
+    );
   }
 
   @override
