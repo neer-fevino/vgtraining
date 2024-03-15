@@ -25,6 +25,11 @@ class DB extends _$DB {
   Future<int> insertFevinoMember(TeamFevinosCompanion entry) {
     return into(teamFevinos).insert(entry);
   }
+
+  Future<List<TeamFevino>> getTeamFevinoTableRowAll(){
+        return (select(teamFevinos).get());
+ 
+  }
 }
 
 LazyDatabase _openConnection() {
@@ -41,3 +46,6 @@ LazyDatabase _openConnection() {
 class DbService {
   DB db = DB();
 }
+
+
+
